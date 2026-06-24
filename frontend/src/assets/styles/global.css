@@ -1,0 +1,24 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,500;0,700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10;
+}
+
+body {
+  /* Dark background & light text color */
+  background-color: #111827; 
+  color: #E5E7EB;
+  
+  /* Universal clean sans-serif font family */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  
+  /* Typography smoothing rendering improvements */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  min-height: 100vh;
+}
