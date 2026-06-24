@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(case_sensitive=True, env_file=".env")
     
     def __init__(self, **values):
-        super().__init__(**values))
+        super().__init__(**values)
         if not self.DATABASE_URL:
             self.DATABASE_URL = f"postgresql://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}@{self.POSTGRES_SERVER}:5432/{self.POSTGRES_DB}"
 
