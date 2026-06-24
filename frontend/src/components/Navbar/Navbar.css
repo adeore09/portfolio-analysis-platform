@@ -1,87 +1,75 @@
-.navbar-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 55px;
-  padding: 0 40px;
-  background-color: #e5e7eb; /* Global dark background matching context rules */
-  border-bottom: 1px solid #e5e7eb;
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(6px);
+.navbar-header{
   position: sticky;
   top: 0;
   z-index: 50;
+  width: 100%;
+  background-color: rgba(10,14,26,0.85);
+  border-bottom: 1px solid #1e293b;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
-.navbar-logo {
-  font-size: 50px;
-  font-weight: 700;
-  color: #111827;
+.navbar-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.PortX{
+  font-size: 24px;
   letter-spacing: -0.5px;
 }
 
-.navbar-links {
+.Port{
+  color:#ffffff;
+}
+
+.X{
+  color:#00d4aa;
+}
+
+.navbar-links{
   display: flex;
-  gap: 30px;
-  list-style-type: none; /* Removes bullets */
+  gap: 32px;
+  list-style: none;
 }
 
 .navbar-links a,
-.btn-login {
+.btn-login{
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
-  color: #4b5563;
+  color: #94a3b8;
   transition: color 0.2s ease;
 }
 
 .navbar-links a:hover,
-.btn-login:hover {
-  color: #ffffff;
+.btn-login:hover{
+  color: #00d4aa;
 }
 
-.navbar-actions {
+.navbar-actions{
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
 }
 
-.btn-signup {
+.btn-signup{
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
   background-color: #00d4aa;
-  color: #ffffff;
-  padding: 8px 16px;
-  border-radius: 6px;
-  transition: background-color 0.2s ease;
+  color: #0a0e1a;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.btn-signup:hover {
-  background-color: #0faaed;
-}
-
-
-
-.margin {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px 0px 0px 0px;
-}
-
-.PortX {
-  position: relative;
-  letter-spacing: -0.5px;
-  line-height: 44px;
-}
-
-.Port {
-  color: #111827;
-  line-height: 44px;
-}
-.X {
-  color: #00d4aa;
-  line-height: 44px;
+.btn-signup:hover{
+  background-color: #00bda0;
+  transform: translateY(-1px);
 }

@@ -1,53 +1,63 @@
-
-.dashboard-wrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    font-family: "Inter", sans-serif;
-    color: #1f2937;
+/* Isolated Outer Frame Container */
+.dashboard-section-wrapper {
+  width: 100%;
+  background-color: #0a0e1a;
+  padding: 80px 0;
+  box-sizing: border-box;
 }
 
-.dashboard-container{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-    width: 100%;
+.dashboard-title {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 24px;
+  text-align: left;
 }
 
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
 
+/* Row Configuration: Grid spanning clean 4 columns widthwise */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+/* Dark Theme Cards Optimization */
 .Metriccards {
-  height: 132px;
-  position: relative;
+  height: 120px;
   border-radius: 16px;
-  background-color: #fff;
-  border: 1px solid #e5e7eb;
+  background-color: #0f172a;
+  border: 1px solid #1e293b;
   box-sizing: border-box;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 20px;
-  gap: 24px;
+  padding: 18px 20px;
+  gap: 16px;
   text-align: left;
-  font-size: 20px;
-  color: #1f2937;
-  font-family: "Inter";
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Subtle Card Hover Effects */
+.Metriccards:hover, .analysis-card:hover {
+  transform: translateY(-2px);
+  border-color: #334155;
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.6);
 }
 
 .AssetName {
   align-self: stretch;
   display: flex;
   align-items: center;
-  gap: 12px;
-}
-
-.ticker-symbol {
-  height: 40px;
-  width: 40px;
-  position: relative;
 }
 
 .assetcompany {
@@ -58,20 +68,19 @@
 }
 
 .asset {
+  color: #ffffff;
   align-self: stretch;
-  position: relative;
+  font-size: 15px;
   letter-spacing: -0.2px;
-  line-height: 24px;
   font-weight: 600;
 }
 
 .description {
   align-self: stretch;
-  position: relative;
   font-size: 12px;
-  letter-spacing: -0.2px;
-  line-height: 16px;
-  color: #6b7280;
+  letter-spacing: -0.1px;
+  color: #64748b;
+  margin-top: 2px;
 }
 
 .content {
@@ -79,79 +88,55 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0px;
-  font-size: 18px;
 }
 
 .value {
-  flex: 1;
-  position: relative;
-  letter-spacing: -0.2px;
-  line-height: 28px;
-  font-weight: 600;
+  color: #ffffff;
+  font-size: 22px;
+  letter-spacing: -0.3px;
+  font-weight: 700;
 }
 
-.badge {
-  display: flex;
-  align-items: flex-start;
-  mix-blend-mode: normal;
-  text-align: center;
-  font-size: 14px;
-  color: #15803d;
-}
-
+/* High Contrast Emerald Badges */
 .badge-base {
-  border-radius: 16px;
-  background-color: #f0fdf4;
+  border-radius: 8px;
+  background-color: rgba(0, 212, 170, 0.1);
+  border: 1px solid rgba(0, 212, 170, 0.15);
+  color: #00d4aa;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2px 8px 2px 10px;
+  padding: 4px 8px;
   gap: 4px;
 }
 
-.iconslong-arrow-up {
-  height: 12px;
-  width: 12px;
-  position: relative;
-  object-fit: cover;
-}
-
 .badgetext {
-  position: relative;
-  letter-spacing: -0.2px;
-  line-height: 20px;
-  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.1px;
+  font-weight: 600;
 }
 
-.ticker-symbol-placeholder{
-    height: 40px;
-    width: 40px;
-    background-color: #f3f4f6;
-    border-radius: 8px;
-    border: 1px dashed #d1d5db;
+/* Analysis Block Grid Layout */
+.analysis-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+  width: 100%;
 }
 
-.analysis-section{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 24px;
-    width: 100%;
-}
-
-.analysis-card{
-    background-color: #fff;
-    border: 1px solid #e5e7eb;
-    border-radius: 16px;
-    padding: 24px;
-    box-sizing: border-box;
+.analysis-card {
+  background-color: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 24px;
+  box-sizing: border-box;
 }
 
 .section-title {
+  color: #ffffff;
   margin: 0 0 20px 0;
   font-size: 18px;
   font-weight: 600;
-  letter-spacing: -0.2px;
 }
 
 /* Pure CSS Pie Chart Styling */
@@ -159,29 +144,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
 }
 
 .pure-css-pie {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  /* Using conic-gradient to simulate a static pie chart using your branding colors mixed with variations */
   background: conic-gradient(
-    #00D4AA 0% 20%,      /* TCS - 20% */
-    #00a383 20% 35%,    /* INFY - 15% */
-    #3b82f6 35% 47%,    /* HDFCBK - 12% */
-    #e5e7eb 47% 100%    /* Others - 53% */
+    #00D4AA 0% 20%,      /* TCS */
+    #00a383 20% 35%,    /* INFY */
+    #3b82f6 35% 47%,    /* HDFCBK */
+    #1e293b 47% 100%    /* Others - Swapped white slice out for Slate 800 */
   );
 }
 
 .chart-legend {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 12px;
   width: 100%;
   font-size: 13px;
-  color: #4b5563;
+  color: #94a3b8;
 }
 
 .legend-item {
@@ -191,16 +175,16 @@
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
 }
 .dot.tcs { background-color: #00D4AA; }
 .dot.infy { background-color: #00a383; }
 .dot.hdfc { background-color: #3b82f6; }
-.dot.others { background-color: #e5e7eb; }
+.dot.others { background-color: #1e293b; }
 
-/* Table Styling */
+/* Dark Table Design Structure */
 .holdings-table {
   width: 100%;
   border-collapse: collapse;
@@ -209,16 +193,16 @@
 }
 
 .holdings-table th {
-  color: #6b7280;
+  color: #64748b;
   font-weight: 500;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #1e293b;
 }
 
 .holdings-table td {
   padding: 16px 0;
-  border-bottom: 1px solid #f3f4f6;
-  color: #374151;
+  border-bottom: 1px solid #1e293b;
+  color: #cbd5e1;
 }
 
 .holdings-table tr:last-child td {
@@ -227,5 +211,5 @@
 
 .ticker-weight-bold {
   font-weight: 600;
-  color: #1f2937;
+  color: #ffffff;
 }

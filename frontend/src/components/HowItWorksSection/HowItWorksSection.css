@@ -1,0 +1,110 @@
+
+.how-it-works-section {
+  width: 100%;
+  background-color: #0a0e1a; /* Consistent deep space background */
+  padding: 100px 0;
+  box-sizing: border-box;
+}
+
+.hw-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hw-tagline {
+  color: #00d4aa; /* PortX Brand Teal */
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.hw-main-title {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.hw-subtitle {
+  color: #94a3b8;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* 3-Column Grid representing timeline pipeline layout */
+.hw-timeline {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.hw-step-card {
+  background-color: #0f172a; /* Slate 900 */
+  border: 1px solid #1e293b;   /* Slate 800 */
+  border-radius: 16px;
+  padding: 36px 32px;
+  box-sizing: border-box;
+  text-align: left;
+  position: relative;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.hw-step-card:hover {
+  transform: translateY(-2px);
+  border-color: #334155;
+}
+
+/* Accent Process Step Numbers */
+.hw-number-badge {
+  font-size: 32px;
+  font-weight: 800;
+  color: rgba(0, 212, 170, 0.15); /* Translucent Brand Teal background tint look */
+  -webkit-text-stroke: 1px rgba(0, 212, 170, 0.4);
+  font-family: monospace, sans-serif;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.hw-step-title {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+
+.hw-step-description {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Horizontal connectors lines between steps for widescreen viewing sizes */
+.hw-connector-line {
+  position: absolute;
+  top: 50%;
+  right: -28px;
+  width: 16px;
+  height: 2px;
+  background-color: #1e293b;
+  z-index: 2;
+}
+
+/* Responsive breakpoint for tablets & mobile screens */
+@media (max-width: 968px) {
+  .hw-timeline {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .hw-connector-line {
+    display: none; /* Hide horizontal indicators on vertical stack views */
+  }
+}
