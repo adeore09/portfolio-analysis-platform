@@ -4,6 +4,7 @@ import LandingPage from "../pages/LandingPage";
 import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import DashboardPage from "../pages/DashboardPage";
+import CreatePortfolioPage from "../pages/CreatePortfolioPage";
 
 function AppRoutes() {
   return (
@@ -11,6 +12,7 @@ function AppRoutes() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
+      <Route path="/createportfolio" element={<CreatePortfolioPage />} />
       <Route path="/dashboard" element={<DashboardPage />} />
     </Routes>
   );
