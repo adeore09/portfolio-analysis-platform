@@ -4,7 +4,7 @@ from app.utils.config import settings
 from app.database.database import engine, Base, get_db
 from app.models import User
 from app.api import auth
-from app.api import portfolio
+from app.api import portfolio, holding
 
 # Initialize database schema tables configuration loop
 Base.metadata.create_all(bind=engine)
@@ -22,6 +22,7 @@ app.add_middleware(
 
 app.include_router(auth.router, prefix="/api/v1/auth", tags=["Authentication"])
 app.include_router(portfolio.router, prefix="/api/v1/portfolios", tags=["Portfolios"])
+app.include_router(holding.router, prefix="/api/v1/portfolios", tags=["Holdings & Transactions"])
 
 @app.get("/")
 def home(db = Depends(get_db)):
