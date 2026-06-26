@@ -6,7 +6,7 @@ class HoldingBase(BaseModel):
     ticker: str
     quantity: float
     average_price: float
-    exchange: str = "NASDAQ"
+    exchange: str = "NSE"
     sector: Optional[str] = None
     
 class HoldingResponse(HoldingBase):
